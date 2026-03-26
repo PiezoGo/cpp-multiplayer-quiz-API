@@ -3,14 +3,14 @@
 using namespace std;
 
 int main(){
-    cout<<"Welcome to this Multiplayer Quiz game";
-    httplib::Client cli("http://example.com");
+    cout<<"Welcome to this Multiplayer Quiz game\n";
+    httplib::Client cli("localhost", 8080);
     //Simple GET request!!
     auto result = cli.Get("/");
     if(auto result = cli.Get("/")){
-        cout<<"The GET request was a success!!";
+        cout<<"The GET request was a success!!\n";
     }else{
-        cout<<"FAILURE!!!!!!!!!!!";
+        cout<<"FAILURE!!!!!!!!!!!\n";
     }
     return 0;
 }
